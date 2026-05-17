@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Services - Divine Emporium Beauty Salon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="hair braiding, lash extensions, brow tinting, makeup services, protective styles, Steelpoort beauty salon" name="keywords">
+    <meta content="Explore Divine Emporium Beauty's full range of services — hair braiding, lash extensions, brow tinting, makeup, and more in Steelpoort." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ══════════════════════════════════════
+           VIDEO HERO — replaces static page header
+        ══════════════════════════════════════ */
+        .video-hero {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .video-hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .video-hero .vhero-fallback {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, #111 0%, #2a2a2a 60%, #111 100%);
+            z-index: 0;
+        }
+
+        .video-hero .vhero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.62);
+            z-index: 1;
+        }
+
+        .video-hero .vhero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 80px 20px;
+        }
+
+        .video-hero .vhero-content h1.display-1 {
+            color: #fff;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+        }
+
+        .video-hero .vhero-content .breadcrumb-item a {
+            color: var(--bs-primary, #d4a017);
+        }
+
+        .video-hero .vhero-content .breadcrumb-item.active {
+            color: rgba(255,255,255,0.75);
+        }
+
+        .video-hero .vhero-content .breadcrumb-item + .breadcrumb-item::before {
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ══════════════════════════════════════
+           BOOKING BANNER VIDEO SECTION
+           Sits between services grid and testimonials
+        ══════════════════════════════════════ */
+        .booking-video-banner {
+            position: relative;
+            width: 100%;
+            min-height: 380px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .booking-video-banner video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .booking-video-banner .bvb-fallback {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #0d0d0d 0%, #252525 50%, #0d0d0d 100%);
+            z-index: 0;
+        }
+
+        .booking-video-banner .bvb-overlay {
+            position: absolute;
+            inset: 0;
+            /* diagonal two-tone overlay for visual interest */
+            background: linear-gradient(
+                120deg,
+                rgba(0,0,0,0.80) 0%,
+                rgba(0,0,0,0.55) 50%,
+                rgba(0,0,0,0.75) 100%
+            );
+            z-index: 1;
+        }
+
+        .booking-video-banner .bvb-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 70px 24px;
+            max-width: 720px;
+        }
+
+        .booking-video-banner .bvb-content h2.script {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--bs-primary, #d4a017);
+            margin-bottom: 0.3rem;
+        }
+
+        .booking-video-banner .bvb-content h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 1.2rem;
+        }
+
+        .booking-video-banner .bvb-content p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Stat pills inside the banner */
+        .bvb-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .bvb-stat {
+            text-align: center;
+        }
+
+        .bvb-stat .num {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--bs-primary, #d4a017);
+            display: block;
+            line-height: 1;
+        }
+
+        .bvb-stat .label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .bvb-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.2);
+            align-self: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light sticky-top p-0">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.html" class="navbar-brand bg-primary py-4 px-5 me-0">
+                <img src="img/assets/divinetransparentlogo.png" style="height: 95px; width: 95px">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link active">Service</a>
+                   
+                   
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex">
+                     <a class="btn btn-primary btn-sm-square me-3" href="https://www.facebook.com/DHStyles/?ref=PROFILE_EDIT_xav_ig_profile_page_web"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/divine_emporiumbeauty/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-primary btn-sm-square" href="https://wa.me/27715240594"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- ══════════════════════════════════════
+         VIDEO HERO — replaces static page header
+    ══════════════════════════════════════ -->
+    <div class="video-hero">
+        <div class="vhero-fallback"></div>
+        <!--
+            Replace with your salon video:
+            <source src="video/services-hero.mp4" type="video/mp4">
+        -->
+        <video autoplay muted loop playsinline poster="img/about.jpg">
+             <source src="img/assets/dvid3.mp4" type="video/mp4"> 
+        </video>
+        <div class=""></div>
+        <div class="vhero-content animated slideInLeft">
+            <h1 class="display-1">Our Services</h1>
+            <!--<nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>-->
+        </div>
+    </div>
+    <!-- Video Hero End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid service py-5">
+        <div class="container">
+            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+                <h1 class="font-dancing-script text-primary">Our Services</h1>
+                <h1 class="mb-5">Explore Our Beauty Services</h1>
+            </div>
+            <div class="row g-4 g-md-0 text-center">
+
+                <!-- Hair Braiding -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 border-bottom border-end wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="img/haircut.png" alt="Hair Braiding">
+                        <h3 class="mb-3">Hair Braiding</h3>
+                        <p class="mb-3">From classic box braids to trendy knotless braids, distressed locs, cornrows, twists, and more — we specialise in stylish and long-lasting protective hairstyles crafted with precision and care.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Makeup Services -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 border-bottom border-lg-end wow fadeIn" data-wow-delay="0.3s">
+                        <img class="img-fluid" src="img/makeup.png" alt="Makeup Services">
+                        <h3 class="mb-3">Makeup Services</h3>
+                        <p class="mb-3">Whether for a special occasion, a photoshoot, or everyday glam, our skilled makeup artists create flawless, personalised looks tailored specifically to your features, skin tone, and preferences.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Lash Extensions -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 border-bottom border-end border-lg-end-0 wow fadeIn" data-wow-delay="0.5s">
+                        <img class="img-fluid" src="img/manicure.png" alt="Lash Extensions">
+                        <h3 class="mb-3">Lash Extensions</h3>
+                        <p class="mb-3">Achieve your perfect lash look with our fully customisable eyelash extensions, available in classic, hybrid, and volume styles. Wake up every morning with effortlessly beautiful, full lashes.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase my-2" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Brow Tinting -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 border-bottom border-lg-bottom-0 border-lg-end wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="img/pedicure.png" alt="Brow Tinting">
+                        <h3 class="mb-3">Brow Tinting</h3>
+                        <p class="mb-3">Enhance and define your brows with our professional tinting service. We shape and colour your natural brows for a polished, well-groomed look that lasts weeks — no daily pencil needed.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Protective Styles -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 border-end wow fadeIn" data-wow-delay="0.3s">
+                        <img class="img-fluid" src="img/massage.png" alt="Protective Styles">
+                        <h3 class="mb-3">Protective Styles</h3>
+                        <p class="mb-3">Our expert stylists specialise in a wide range of protective hairstyles designed to keep your natural hair healthy, moisturised, and growing strong — while keeping you looking absolutely stunning.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Special Occasion Glam -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-item h-100 p-4 wow fadeIn" data-wow-delay="0.5s">
+                        <img class="img-fluid" src="img/skin-care.png" alt="Special Occasion Glam">
+                        <h3 class="mb-3">Special Occasion Glam</h3>
+                        <p class="mb-3">Get red-carpet-ready with our full glam packages — perfect for weddings, matric dances, baby showers, photoshoots, and every milestone moment that deserves to be unforgettable.</p>
+                        <a class="btn btn-sm btn-primary text-uppercase" href="contact.html">Book Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- ══════════════════════════════════════
+         BOOKING BANNER VIDEO SECTION
+         Sits between the services grid and testimonials —
+         a full-width cinematic strip with key stats and a booking CTA
+    ══════════════════════════════════════ -->
+    <div class="booking-video-banner">
+        <div class="bvb-fallback"></div>
+        <!--
+            Add a second salon video (e.g. a braiding time-lapse or makeup reel):
+            <source src="video/salon-reel.mp4" type="video/mp4">
+        -->
+        <video autoplay muted loop playsinline poster="img/assets/salon3.png">
+             <source src="img/assets/dvid4.mp4" type="video/mp4"> 
+        </video>
+        <div class="bvb-overlay"></div>
+
+        <div class="bvb-content wow fadeIn" data-wow-delay="0.2s">
+            <h2 class="script">Ready to Glow?</h2>
+            <h1 style="color:white">Book Your Appointment </h1>
+            <p>Every service at Divine Emporium Beauty is a personalised experience crafted just for you. Premium products, skilled hands, and a salon that feels like home — all in Steelpoort.</p>
+
+            <div class="bvb-stats">
+                <div class="bvb-stat">
+                    <span class="num">4</span>
+                    <span class="label">Signature Services</span>
+                </div>
+                <div class="bvb-divider d-none d-sm-block"></div>
+                <div class="bvb-stat">
+                    <span class="num">500+</span>
+                    <span class="label">Happy Clients</span>
+                </div>
+                <div class="bvb-divider d-none d-sm-block"></div>
+                <div class="bvb-stat">
+                    <span class="num">100%</span>
+                    <span class="label">Premium Products</span>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a class="btn btn-primary text-uppercase px-5 py-3" href="contact.html">Book Now</a>
+                <!--<a class="btn btn-outline-light text-uppercase px-5 py-3" href="price.html">View Pricing</a>-->
+            </div>
+        </div>
+    </div>
+    <!-- Booking Banner Video Section End -->
+
+
+    <!-- Testimonial Start 
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center wow fadeIn" data-wow-delay="0.2s">
+                <h1 class="font-dancing-script text-primary">Testimonial</h1>
+                <h1 class="mb-5">What Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center bg-light p-4">
+                    <i class="fa fa-quote-left fa-3x mb-3"></i>
+                    <p>The braids I got here lasted so long and looked absolutely stunning. The team is so professional and made me feel right at home. I won't go anywhere else!</p>
+                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-1.jpg" alt="">
+                    <h4 class="mb-1">Thandi M.</h4>
+                    <span>Loyal Client</span>
+                </div>
+                <div class="text-center bg-light p-4">
+                    <i class="fa fa-quote-left fa-3x mb-3"></i>
+                    <p>My lash extensions were done perfectly — so natural yet so full. I've been coming back every month and the results are always consistently beautiful.</p>
+                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-2.jpg" alt="">
+                    <h4 class="mb-1">Lerato K.</h4>
+                    <span>Regular Client</span>
+                </div>
+                <div class="text-center bg-light p-4">
+                    <i class="fa fa-quote-left fa-3x mb-3"></i>
+                    <p>I booked makeup for my matric dance and I felt like a queen! The artist truly understood the look I wanted. Highly recommend Divine Emporium to everyone.</p>
+                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-3.jpg" alt="">
+                    <h4 class="mb-1">Boitumelo S.</h4>
+                    <span>Happy Client</span>
+                </div>
+                <div class="text-center bg-light p-4">
+                    <i class="fa fa-quote-left fa-3x mb-3"></i>
+                    <p>The brow tinting service here is amazing. My brows look so defined and natural. The salon atmosphere is so relaxing — a true gem in Steelpoort!</p>
+                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-4.jpg" alt="">
+                    <h4 class="mb-1">Nomsa D.</h4>
+                    <span>Satisfied Client</span>
+                </div>
+            </div>
+        </div>
+    </div>
+     Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 mt-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 pe-lg-5">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="display-5 text-primary mb-0"><i class="bi bi-scissors"></i> Divine Emporium Beauty</h1>
+                    </a>
+                    <p class="mt-3">A premier beauty destination dedicated to enhancing natural beauty through expert hair braiding, flawless lash extensions, precise brow tinting, and professional makeup services.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i>10225 Dipolateng Section, GaMampuru, Steelpoort 1133</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-2"></i>071 524 0594 &nbsp;|&nbsp; 082 705 3377</p>
+                    <p><i class="fa fa-envelope me-2"></i>divineemporium94@gmail.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                         <a class="btn btn-primary btn-sm-square me-3" href="https://www.facebook.com/DHStyles/?ref=PROFILE_EDIT_xav_ig_profile_page_web"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/divine_emporiumbeauty/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-primary btn-sm-square" href="https://wa.me/27715240594"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-sm-square btn-primary me-3" href="mailto:divineemporium94@gmail.com"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <h5 class="text-primary mb-4">Quick Links</h5>
+                            <a class="btn btn-link" href="about.html">About Us</a>
+                            <a class="btn btn-link" href="contact.html">Contact Us</a>
+                            <a class="btn btn-link" href="service.html">Our Services</a>
+                            <a class="btn btn-link" href="price.html">Pricing</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="text-primary mb-4">Our Services</h5>
+                            <a class="btn btn-link" href="service.html">Hair Braiding</a>
+                            <a class="btn btn-link" href="service.html">Lash Extensions</a>
+                            <a class="btn btn-link" href="service.html">Brow Tinting</a>
+                            <a class="btn btn-link" href="service.html">Makeup Services</a>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5 class="text-primary mb-4">Stay Updated</h5>
+                            <div class="position-relative w-100 mb-2">
+                                <input class="form-control bg-secondary border-0 w-100 ps-4 pe-5" type="text"
+                                    placeholder="Enter Your Email" style="height: 60px;">
+                                <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2">
+                                    <i class="fa fa-paper-plane text-primary fs-4"></i>
+                                </button>
+                            </div>
+                            <p class="mb-0">Subscribe for beauty tips, offers, and updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white border-top border-secondary py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="https://divineemporium.com">Divine Emporium Beauty</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a class="border-bottom" href="https://divineemporium.com">divineemporium.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
